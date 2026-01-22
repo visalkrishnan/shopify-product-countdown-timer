@@ -1,0 +1,8 @@
+{
+  "blocks": {
+    "timer": {
+      "name": "Countdown Timer",
+      "description": "Displays a countdown timer for sales"
+    }
+  }
+}
