@@ -56,3 +56,43 @@ product-countdown-timer/
 │       ├── blocks/
 │       │   └── timer.liquid      # The HTML entry point for the Theme Editor.
 │       └── shopify.extension.toml
+
+⚙️ Setup & Installation
+Follow these steps to run the project locally.
+Prerequisites
+Node.js (v18 or higher)
+A Shopify Partner Account
+A MongoDB Database (Local or Atlas URL)
+1. Clone the Repository
+code
+Bash
+git clone https://github.com/visalkrishnan/shopify-product-countdown-timer.git
+cd shopify-product-countdown-timer
+2. Install Dependencies
+code
+Bash
+npm install
+3. Configure Environment
+Create a .env file in the root directory with the following keys:
+code
+Env
+SHOPIFY_API_KEY=your_api_key
+SHOPIFY_API_SECRET=your_api_secret
+SCOPES=read_products,write_products
+MONGODB_URI=mongodb://localhost:27017/countdown_timer
+4. Run the App
+code
+Bash
+npm run dev
+Select your development store when prompted. The Shopify CLI will automatically update your .env with the App URL.
+5. Add the Widget to the Store
+Go to your Shopify Admin > Online Store > Themes.
+Click Customize on your current theme.
+Navigate to a Product Page.
+In the sidebar, click Add Block and select Countdown Widget.
+Drag it to your desired position (e.g., below the Price) and click Save.
+🧪 How to Test
+Create a Timer: Go to the App Dashboard, click "Create Timer", select a product, and set the urgency to 5 minutes.
+Verify: Go to that product on the storefront. You should see the timer running.
+Test Urgency: Edit the timer to end in 2 minutes. Refresh the storefront. The timer should turn Red (or your selected color) and pulse.
+Test Priority: Create a second timer for the same product ending later. The app will automatically show the one ending soonest.
