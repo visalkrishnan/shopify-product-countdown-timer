@@ -7,7 +7,6 @@ embedded = true
 
 [build]
 automatically_update_urls_on_dev = true
-include_config_on_deploy = true
 
 [webhooks]
 api_version = "2026-01"
@@ -22,7 +21,7 @@ api_version = "2026-01"
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "read_price_rules,write_price_rules,read_discounts,write_discounts,read_discovery,write_discovery,read_files,write_files,write_inventory_shipments,read_inventory_shipments,read_markets,write_markets,write_order_edits,read_order_edits,read_privacy_settings,write_privacy_settings,read_product_feeds,write_product_feeds,read_product_listings,write_product_listings,read_products,write_products,read_purchase_options,write_purchase_options"
+scopes = "read_discounts,read_discovery,read_files,read_inventory_shipments,read_markets,read_order_edits,read_price_rules,read_privacy_settings,read_product_feeds,read_product_listings,read_products,read_purchase_options,write_discounts,write_discovery,write_files,write_inventory_shipments,write_markets,write_order_edits,write_price_rules,write_privacy_settings,write_product_feeds,write_product_listings,write_products,write_purchase_options"
 optional_scopes = [ ]
 use_legacy_install_flow = false
 

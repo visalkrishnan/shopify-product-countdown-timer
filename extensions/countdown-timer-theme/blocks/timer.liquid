@@ -2,9 +2,10 @@
   class="product-countdown-timer-app"
   data-product-id="{{ product.id }}"
   data-shop="{{ shop.permanent_domain }}"
+  {% comment %} ✅ NEW: Pass Collection IDs as a comma-separated string {% endcomment %}
+  data-collection-ids="{{ product.collections | map: 'id' | join: ',' }}"
 >
-  <!-- React/Preact will mount here -->
-  <div class="timer-loading">Loading offer...</div>
+  <!-- Widget mounts here -->
 </div>
 
 <script src="{{ 'timer.js' | asset_url }}" defer></script>
